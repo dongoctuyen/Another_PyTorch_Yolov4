@@ -47,6 +47,7 @@ class ListDataset(Dataset):
         width, height = img.size
 
         if os.path.exists(label_path):
+
             boxes = torch.from_numpy(np.loadtxt(label_path).reshape(-1, 5))
         else:
             print(label_path)
